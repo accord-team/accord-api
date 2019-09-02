@@ -14,6 +14,7 @@ const schema = makeExecutableSchema({
 
 const server = new ApolloServer({
   schema,
+  playground: true,
   mocks: false,
   debug: true,
   tracing: true,
@@ -26,7 +27,7 @@ const server = new ApolloServer({
     let decodedToken = {};
     if (noAuthEndpoints.indexOf(operationName) === -1 && false) {
       try {
-        decodedToken = jwt.verify(token, '1234');
+        decodedToken = jwt.verify(token as string, '1234');
       } catch {
         throw new AuthenticationError('Aaaa, takiego wała, spierdalaj')
       }
@@ -36,6 +37,6 @@ const server = new ApolloServer({
   }
 })
 
-server.listen().then(({ url }) => {
-  console.log(`Server ready at ${url}`);
+server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
 });

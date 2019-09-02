@@ -2,16 +2,16 @@
   "compilerOptions": {
     "target": "es5",
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "module": "commonjs",
     "sourceMap": true,
     "rootDir": "src",
     "baseUrl": "src",
-    "outDir": "dist",
+    "outDir": "public",
     "lib": [
       "esnext", "dom"
     ],
-    "paths": {
-      "src/*": ["/*"]
-    }
+    "typeRoots": ["node_modules/@types"]
   }
 }
