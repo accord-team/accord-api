@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "sourceMap": true,
+    "rootDir": "src",
+    "baseUrl": "src",
+    "outDir": "dist",
+    "lib": [
+      "esnext", "dom"
+    ],
+    "paths": {
+      "src/*": ["/*"]
+    }
+  }
+}
