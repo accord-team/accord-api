@@ -15,6 +15,7 @@ const schema = makeExecutableSchema({
 const server = new ApolloServer({
   schema,
   playground: true,
+  introspection: true,
   mocks: false,
   debug: true,
   tracing: true,
