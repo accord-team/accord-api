@@ -2,8 +2,8 @@
   "name": "acord_server",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "tsc",
-    "start": "ts-node src/index.ts"
+    "start": "ENV=staging node index.js",
+    "deploy": "tsc && gh-pages -d public"
   },
   "dependencies": {
     "apollo-server": "2.8.2",
@@ -11,15 +11,15 @@
     "jsonwebtoken": "8.5.1",
     "knex": "0.19.2",
     "lodash": "4.17.15",
-    "mysql": "2.17.1",
-    "sqlite3": "^4.1.0",
-    "ts-node": "7.0.1",
-    "typescript": "3.2.2"
+    "mysql": "2.17.1"
   },
   "devDependencies": {
     "@types/graphql": "14.5.0",
     "@types/jsonwebtoken": "8.3.3",
     "@types/lodash": "4.14.137",
-    "nodemon": "1.19.1"
+    "gh-pages": "2.1.1",
+    "nodemon": "1.19.1",
+    "ts-node": "7.0.1",
+    "typescript": "3.2.2"
   }
 }
