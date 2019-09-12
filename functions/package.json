@@ -1,0 +1,36 @@
+{
+  "name": "acord_server",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "8"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase experimental:functions:shell",
+    "lint": "tslint -p tsconfig.json",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "apollo-server-cloud-functions": "^2.9.3",
+    "firebase-admin": "^8.5.0",
+    "firebase-functions": "^3.2.0",
+    "firesql": "^2.0.2",
+    "graphql": "^14.4.2",
+    "graphql-tools": "^4.0.5",
+    "knex": "^0.19.2",
+    "lodash": "^4.17.15",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/jsonwebtoken": "^8.3.3",
+    "@types/lodash": "^4.14.137",
+    "nodemon": "^1.19.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  }
+}
