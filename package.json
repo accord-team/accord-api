@@ -6,7 +6,7 @@
     "deploy": "tsc && cp package.json public/package.json && cp knexfile.js public/knexfile.js && gh-pages -d public"
   },
   "dependencies": {
-    "apollo-server": "2.8.2",
+    "apollo-server": "2.14.2",
     "graphql": "14.4.2",
     "jsonwebtoken": "8.5.1",
     "knex": "0.19.2",
